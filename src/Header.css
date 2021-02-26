@@ -2,6 +2,9 @@
   display: flex;
   align-items: center;
   background-color: var(--slack-color);
+  position: sticky;
+  top: 0;
+  height: 40px;
 }
 
 .header__Left {

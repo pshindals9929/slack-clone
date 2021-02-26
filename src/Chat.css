@@ -2,7 +2,7 @@
   flex: 1;
   flex-grow: 1;
   overflow-y: scroll;
-  padding-bottom: 150px;
+  padding-bottom: 80px;
 }
 
 .chat__header {
@@ -11,6 +11,9 @@
   justify-content: space-between;
   padding: 20px;
   border: 1px solid lightgray;
+  background-color: white;
+  position: sticky;
+  top: 0px;
 }
 .chat__headerright > p {
   display: flex;
