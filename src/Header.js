@@ -5,28 +5,31 @@ import AccessTimeIcon from "@material-ui/icons/AccessTime";
 import SearchIcon from "@material-ui/icons/Search";
 import HelpOutlineIcon from "@material-ui/icons/HelpOutline";
 import { useStateValue } from "./StateProvider";
+import { useSelector } from "react-redux";
 
 function Header() {
-  const [{ user }] = useStateValue();
+  const user = useSelector(state => state.user)
   return (
     <div className="header">
-      <div className="header__Left">
+     <div className="header__Left">
+      </div>
+
+      <div className="header__middle">
+      <AccessTimeIcon />
+      <div className="header__serach">
+       <input placeholder="serach" />
+      </div>
+      <HelpOutlineIcon />
+      </div>
+      <div className="header__right">
         <Avatar
           className="header__avator"
           alt={user?.displayName}
           src={user?.photoURL}
         />
-        <AccessTimeIcon />
       </div>
 
-      <div className="header__serach">
-        <SearchIcon className="header__SearchIcon" />
-        <input placeholder="serach" />
-      </div>
 
-      <div className="header__right">
-        <HelpOutlineIcon />
-      </div>
     </div>
   );
 }

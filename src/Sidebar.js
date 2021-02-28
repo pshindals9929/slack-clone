@@ -14,10 +14,11 @@ import ExpandLessIcon from "@material-ui/icons/ExpandLess";
 import db from "./firebase";
 import AddIcon from "@material-ui/icons/Add";
 import { useStateValue } from "./StateProvider";
+import { useSelector } from "react-redux";
 
 function Sidebar() {
   const [channels, setChannels] = useState([]);
-  const [{ user }] = useStateValue();
+  const user = useSelector(state => state.user)
 
   useEffect(() => {
     db.collection("rooms").onSnapshot((snapshot) =>

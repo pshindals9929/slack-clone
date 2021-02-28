@@ -5,10 +5,11 @@ import Sidebar from "./Sidebar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Chat from "./Chat";
 import Login from "./Login";
-import { useStateValue } from "./StateProvider";
+import { useSelector } from "react-redux";
+
 
 function App() {
-  const [{ user }, dispatch] = useStateValue();
+  const user = useSelector(state => state.user);
   return (
     <div className="App">
       <Router>
@@ -23,7 +24,6 @@ function App() {
                 <Route path="/room/:roomId">
                   <Chat />
                 </Route>
-              
               </Switch>
             </div>
           </React.Fragment>

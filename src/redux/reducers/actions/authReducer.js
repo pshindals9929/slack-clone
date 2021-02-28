@@ -6,17 +6,24 @@ export const actionTypes = {
   SET_USER: "SET_USER",
 };
 
-const reducer = (state, action) => {
-  console.log(action);
+export function setuser() {
+  return {
+    type: "SET_USER",
+    payload: null
+  };
+}
+
+const authReducer = (state=initialState, action) => {
+  console.log(action.type);
   switch (action.type) {
     case actionTypes.SET_USER:
       return {
         ...state,
-        user: action.user,
+        user: action.payload,
       }
     default:
       return state;
   }
 };
 
-export default reducer;
+export default authReducer;

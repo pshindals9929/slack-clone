@@ -1,32 +1,52 @@
-.chatInput {
-  border-radius: 20px;
-}
+ 
+.chatInput__container{
 
-.chatInput > form {
-  
-  padding-left: 20px;
-  position: fixed;
-  bottom: 10px;
-  display: flex;
-  justify-content: center;
+  width: 95%;
+  margin-left: 15px;
+  position: sticky;
+  height: 12vh;
+  bottom: 0px;
   background-color: white;
-}
-.chatInput > form > input {
-  /* position: fixed;
-  bottom: 30px;
-  width: 60%;
-  border: 1px solid gray;
-  border-radius: 3px;
-  padding: 20px; */
-  flex: 0.8;
-
-  padding: 15px;
-
-  width: 450px;
+  border: 2px solid gray;
+  border-radius: 5px;
 }
 
-.chatInput > form > Button {
-  flex: 0.2;
-  font-weight: 700;
-  color: black;
+.chatInput > form > input{
+width: 90%;
+border: none;
+outline: none;
+padding-left: 20px;
+height: 40px;
+}
+
+.chatModify_Icons{
+display: flex;
+justify-content: space-between;
+border-top: 0.5px solid gray;
+background-color: whitesmoke;
+
+}
+
+
+.chatModify_Icons__right>.MuiSvgIcon-root{
+  background-color: whitesmoke !important;
+  padding-left: 20px !important;
+  color: gray;
+  align-items: center;
+  padding-top: 8px;
+}
+
+.send>.MuiSvgIcon-root{
+  align-items: center;
+  background-color: whitesmoke !important;
+  padding-left: 20px !important;
+  color: gray;
+}
+
+.chatModify_Icons__left>.MuiSvgIcon-root{
+  background-color: whitesmoke !important;
+  padding-right: 20px !important;
+  color: gray;
+  align-items: center;
+  padding-top: 8px;
 }

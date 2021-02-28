@@ -44,6 +44,7 @@ function Chat() {
           </p>
         </div>
       </div>
+    
       <div className="chat__messages">
         {roomMessages.map(({ message, user, userImage, timestamp, userId }) => (
           <Messages
@@ -58,6 +59,7 @@ function Chat() {
       {console.log(roomId)}
       <ChatInput channelName={roomsDetails?.name} channelId={roomId} />
     </div>
+
   );
 }
 

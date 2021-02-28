@@ -2,48 +2,47 @@
   display: flex;
   align-items: center;
   background-color: var(--slack-color);
-  position: sticky;
-  top: 0;
-  height: 40px;
+  height: 7vh;
 }
 
 .header__Left {
-  flex: 0.3;
+  flex: 0.28;
+}
+.header__middle{
+  flex: 0.4;
   display: flex;
   align-items: center;
-  margin-left: 2%;
-}
-.header__Left > .MuiSvgIcon-root {
-  margin-left: 2%;
-  color: white;
+
 }
 
 .header__serach {
-  flex: 0.4;
+  
   display: flex;
   text-align: center;
-  /* padding: 0 50px; */
+  height: 25px;
   color: gray;
   border: 1px solid gray;
   border-radius: 6px;
 }
 .header__right {
   flex: 0.3;
-  padding-left: 2%;
+  display: flex;
+  }
+.header__avator{
+ margin-left: auto;
 }
-.header__right > .MuiSvgIcon-root {
+.header__middle > .MuiSvgIcon-root {
   color: white;
+  padding-right: 15px;
+  padding-left: 15px;
+
 }
 
 .header__serach > input {
   background-color: transparent;
   border: none;
   text-align: center;
-  min-width: 30vw;
+  min-width: 40vw;
   color: white;
   flex: 0.9;
-}
-.header__SearchIcon {
-  flex: 0.1;
-  color: white;
 }
