@@ -1,0 +1,83 @@
+.header {
+  display: flex;
+  align-items: center;
+  background-color: var(--slack-color);
+  height: 7vh;
+}
+
+.header__Left {
+  flex: 0.28;
+}
+.header__middle{
+  flex: 0.4;
+  display: flex;
+  align-items: center;
+
+}
+
+.header__serach {
+  
+  display: flex;
+  text-align: center;
+  height: 25px;
+  color: gray;
+  border: 1px solid gray;
+  border-radius: 6px;
+}
+.header__right {
+  flex: 0.3;
+  display: flex;
+  }
+.header__avator{
+ margin-left: auto;
+}
+.header__middle > .MuiSvgIcon-root {
+  color: white;
+  padding-right: 15px;
+  padding-left: 15px;
+
+}
+
+.header__serach > input {
+  background-color: transparent;
+  border: none;
+  text-align: center;
+  min-width: 40vw;
+  color: white;
+  flex: 0.9;
+}
+
+.modal__header{
+display: flex;
+align-items: center;
+margin: auto;
+}
+.modal__Options>p{
+  padding:10px 20px;
+  font-family: 'Lato', sans-serif;
+  font-size:16px;
+  font-weight: 700;
+}
+
+.modal__Options>p:hover{
+  color: whitesmoke;
+  background-color: indigo;
+}
+.modal__header>img{
+  height: 40px;
+  width: 40px;
+  object-fit: contain;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.user__name>p{
+  align-items: center;
+  display: flex;
+}
+.user__name> p > .MuiSvgIcon-root{
+  color: green;
+
+}

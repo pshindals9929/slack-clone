@@ -1,9 +1,17 @@
 import React from "react";
 import "./messages.css";
+import {useRef,useEffect } from "react"
 
 function Messages({ message, timestamp, user, userId, userImage }) {
+  const messagesEndRef = useRef(null);
+  const scrollToBottom = () => {
+    messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
+  useEffect(scrollToBottom, [message]);
+
   return (
-    <div className="message">
+    <div  className="message">
       <img src={userImage} alt="" />
       <div className="message__info">
         <h4>
@@ -15,6 +23,7 @@ function Messages({ message, timestamp, user, userId, userImage }) {
         </h4>
         <p>{message}</p>
       </div>
+      <div ref={messagesEndRef} />
     </div>
   );
 }
