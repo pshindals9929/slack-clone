@@ -3,14 +3,17 @@ import "./Chat.css";
 import { useParams } from "react-router-dom";
 import StarBorderIcon from "@material-ui/icons/StarBorder";
 import InfoIcon from "@material-ui/icons/Info";
-import db from "./firebase";
+import db from "../firebase";
 import Messages from "./Messages";
 import ChatInput from "./ChatInput";
+import getmessage from "../redux/actions/message"
+
 
 function Chat() {
   const { roomId } = useParams();
   const [roomsDetails, setroomsDetails] = useState(null);
   const [roomMessages, setroomMessages] = useState([]);
+  //const dispatch = useDispatch(getmessage());
   useEffect(() => {
     if (roomId) {
       db.collection("rooms")
@@ -44,7 +47,7 @@ function Chat() {
           </p>
         </div>
       </div>
-    
+
       <div className="chat__messages">
         {roomMessages.map(({ message, user, userImage, timestamp, userId }) => (
           <Messages
@@ -59,7 +62,6 @@ function Chat() {
       {console.log(roomId)}
       <ChatInput channelName={roomsDetails?.name} channelId={roomId} />
     </div>
-
   );
 }
 

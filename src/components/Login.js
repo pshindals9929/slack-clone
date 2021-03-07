@@ -1,15 +1,11 @@
 import React from "react";
 import "./login.css";
 import { Button } from "@material-ui/core";
-import { auth, provider } from "./firebase";
-import { actionTypes } from "./redux/reducers/actions/authReducer";
-import { useStateValue } from "./StateProvider";
-import {connect,useDispatch} from "react-redux"
-import fetchUsers from "./redux/fetchUsers"
+import { useDispatch } from "react-redux";
+import fetchUsers from "../redux/fetchUsers";
 
 function Login() {
-const dispatch = useDispatch();
-
+  const dispatch = useDispatch();
 
   return (
     <div className="login">
@@ -20,13 +16,12 @@ const dispatch = useDispatch();
         />
         <h1>Sign in to C__Corner</h1>
         <h5>C__Corner.slack.com </h5>
-        <Button onClick={()=>dispatch(fetchUsers())}>Sign in With Google</Button>
+        <Button onClick={() => dispatch(fetchUsers())}>
+          Sign in With Google
+        </Button>
       </div>
     </div>
   );
 }
 
 export default Login;
-
-
-

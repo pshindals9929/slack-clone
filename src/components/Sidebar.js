@@ -11,14 +11,13 @@ import PeopleAltIcon from "@material-ui/icons/PeopleAlt";
 import AppsIcon from "@material-ui/icons/Apps";
 import FileCopyIcon from "@material-ui/icons/FileCopy";
 import ExpandLessIcon from "@material-ui/icons/ExpandLess";
-import db from "./firebase";
+import db from "../firebase";
 import AddIcon from "@material-ui/icons/Add";
-import { useStateValue } from "./StateProvider";
 import { useSelector } from "react-redux";
 
 function Sidebar() {
   const [channels, setChannels] = useState([]);
-  const user = useSelector(state => state.user)
+  const user = useSelector((state) => state.user);
 
   useEffect(() => {
     db.collection("rooms").onSnapshot((snapshot) =>
@@ -34,7 +33,6 @@ function Sidebar() {
     <div className="sideBar">
       <div className="sidebar__header">
         <div className="sidebar__info">
-          <h2>CleverProgrammer</h2>
           <h3>
             <FiberManualRecordIcon />
             {user?.displayName}

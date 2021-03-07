@@ -7,9 +7,8 @@ import Chat from "./Chat";
 import Login from "./Login";
 import { useSelector } from "react-redux";
 
-
 function App() {
-  const user = useSelector(state => state.user);
+  const user = useSelector((state) => state.user);
   return (
     <div className="App">
       <Router>

@@ -1,5 +1,6 @@
-import actionTypes from "./reducers/authReducer";
-import { auth, provider } from "../firebase";
+import {LOGOUT} from "./types";
+import { auth, provider } from "../../firebase";
+import {SET_USER} from "./types"
 
 
 const fetchUsers = () => {
@@ -7,9 +8,8 @@ const fetchUsers = () => {
     auth
       .signInWithPopup(provider)
       .then((result) => {
-        console.log(result,actionTypes.SET_USER);
         dispatch({
-          type : "SET_USER",
+          type : SET_USER,
           payload : result.user,
         });
       })
@@ -20,3 +20,17 @@ const fetchUsers = () => {
 };
 
 export default fetchUsers;
+
+
+export const logout = () => (dispatch) => {
+  localStorage.removeItem("state");
+  dispatch({
+    type: LOGOUT,
+  });
+};
+
+
+
+
+
+
